@@ -76,6 +76,7 @@ int marks2 = marks1;     // here java checks the value contained in marks1, and 
   ```java
   boolean isAdult = true;
   ```
+> Compiler assigns reasonable default values for variables that are declared but not initialized. But it is a bad programming practice to rely on this and local variables are not assigned any default values, also leads to compiler errors.
 
 Datatype | Size | Default value
 :--- | :---: | :---:
@@ -88,3 +89,25 @@ double | 8 bytes | 0.0
 char | 2 bytes | '\u0000'
 boolean | 1 bit | false
 any object | NA | null
+
+### Reference datatypes:
+- All objects in java are considered to be reference type. Many reference types come packaged as part of java libraries. User can define their own reference datatype.
+- Reference variable stores the address of the data. Data can be a complex structure which contains variables of other data types. Data is actually stored on heap.
+- `null` is a special value that is used to indicate an object(reference) doesn't contain any value or is currently unavailable.
+- We will use `String` object to illustrate properties of reference types. We can create new objects using `new` keyword. When we do this, some space is allocated for data in memory(instantiation) and initialize it by assigning some value.
+```java
+String firstName = new String("harsha");  // instantiation and initialization with value "harsha"
+String firstName = "harsha";     // String in java can be created without using new keyword and should be enclosed in double quotes
+```
+- Be careful when comparing two reference variables or using them in assignement operations. `==` checks if addresses stored in reference variables are same. Use method `equals` to check if actual values are same.
+```java
+String name1 = "harsha";      // stores "harsha" on heap and address of that memory is stored in name1
+String name2 = name1;         // copies the memory address stored in name1 and stores it in name2. So both name1 and name2 point to same data
+String name3 = "harsha";      // creates new "harsha" on heap and address of that is stored in name3
+// checks addresses
+System.out.println(name1 == name2);  // prints true
+System.out.println(name1 == name3);  // prints false
+// checks values
+System.out.println(name1.equals(name2));  // prints true
+System.out.println(name1.equals(name3));  // prints true
+```
