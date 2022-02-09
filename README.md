@@ -55,3 +55,9 @@ int marks2 = marks1;     // here java checks the value contained in marks1, and 
   ```java
   double Pi = 3.141_592_653_589;
   ```
+  > Be careful when doing arithmetic operations on decimal types. Use `BigDecimal` type or equivalent value in integer types for precise applications such as banking, scientific etc.
+  > Decimal literals can also be represented using scientific notation
+  ```java
+  float pi = 314e-2f;
+  double pi = 3_141_592_653_589E-12;
+  ```
