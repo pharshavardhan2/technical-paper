@@ -111,3 +111,24 @@ System.out.println(name1 == name3);  // prints false
 System.out.println(name1.equals(name2));  // prints true
 System.out.println(name1.equals(name3));  // prints true
 ```
+
+## Data Structures:
+- Data structures comprise of a collection of data items. They describe the way the data is organized, relation between different data items and operations that can be performed on data.
+- They support two types of operations: internal, for organizing data in memory, abstracted from user and external, to provide a way for user to store, retrieve and modify data.
+- To design efficient programs, we need to consider both algorithms and data structures. Different type of data structures have different time and space complexities, one might be suited for faster read operations, another for search. So based on problem at hand, we have to choose a data structure.
+- All common data structure implementations like array, linked list, hash map, trees etc. come packaged with standard java libraries. 
+  ### Fixed Size Array:
+  - It is a fixed collection of elements of similar type that can be accessed in sequential manner. Once assigned, its size can't be changed.
+  - Java implemented it as reference type, whose elements(can be of any type) can be accessed using numerical index, where indices range from 0 to arraySize - 1.
+  ```java
+  // declaration and initialization
+  int[] arr1 = {1, 4, 6, 7};         // arr1 has size 4 and stores only int values
+  String arr2[] = {"hi", "hello"};   // any data type and brackets are different place
+  int[] arr3 = new int[10];          // creates new array of size 10 with default values of 0
+  String[] arr4 = new String[] {"an", "a"};
+  // properties and operations
+  System.out.println(arr1.length);   // prints size of arr1 which is 4
+  System.out.println(arr1[3]);       // accessing element at any index takes same time (fast)
+  arr1[2] = 3;                       // modify element at index 2 
+  System.out.println(arr1[5]);       // runtime error occurs if we try to access element using index out of the possible range
+  ```
