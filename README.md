@@ -13,24 +13,24 @@ int marks1 = 90;
 int marks2 = marks1;     // here java checks the value contained in marks1, and creates a new value 90 and stores it in marks2
 ```
 - There are eight primitive datatypes in java.
-  #### Integer types:
-  ##### byte:
+  #### Integer types:  
+  1. ##### byte:
   - It has size of 1 byte(8 bits) and can store whole numbers from -128(-2<sup>8-1</sup>) to 127(2<sup>8-1</sup>-1).
   ```java
   byte smallNo = -30;   // byte, short are used when there are constraints on storage space
   ```
-  ##### short:
+  2. ##### short:
   - It has size of 2 bytes(16 bits) and can store whole numbers from -32768(-2<sup>15</sup>) to 32767(2<sup>15</sup>-1).
   ```java
   short mediumNo = 4000;
   ```
-  ##### int:
+  3. ##### int:
   - It has size of 4 bytes(32 bits) and can store whole numbers from -2<sup>31</sup> to 2<sup>31</sup>-1. It is prefered integer datatype.
   - By default, java assumes an integer literal as `int` datatype.
   ```java
   int normalNo = -327582;
   ```
-  ##### long:
+  4. ##### long:
   - It has size of 8 bytes(64 bits) and can store whole numbers from -2<sup>63</sup> to 2<sup>63</sup>-1.
   - Use **L** or **l** at the end of integer literal to make it a `long` type.
   ```java
@@ -44,13 +44,13 @@ int marks2 = marks1;     // here java checks the value contained in marks1, and 
   - Used to represent decimal values. As there are infinite decimal numbers in any given range, no storage space is enough to represent all values. 
   - Java uses IEEE 754 floating point representation. Precision represents the maximum number of digits that can be represented after decimal point.
   - You can learn more about range of values [here](https://docs.oracle.com/javase/specs/jls/se7/html/jls-4.html#jls-4.2.3).
-  ##### float:
+  5. ##### float:
   - It has size of 4 bytes and precision of 7 decimal digits.
   - Use **f** or **F** at the end of decimal literal to make it `float` type.
   ```java
   float lessPrecisePi = 3.14f;
   ```
-  ##### double:
+  6. ##### double:
   - It has a size of 8 bytes and precision of 15 digits. `double` type is prefered over `float` and is the default type for decimals in java.
   ```java
   double Pi = 3.141_592_653_589;
@@ -61,18 +61,30 @@ int marks2 = marks1;     // here java checks the value contained in marks1, and 
   float pi = 314e-2f;
   double pi = 3_141_592_653_589E-12;
   ```
-  #### char:
+  7. #### char:
   - It has size of 2 bytes. It is used to represent single 16 bit unicode character.
   - Use single quotes `''` to enclose char literal. Represent literals as 'A' or unicode escape like `\u0c05`(అ).
-  - Range is `\u0000` to `\uffff'.
+  - Range is `\u0000` to `\uffff`.
   ```java
   char ch1 = 'A';
   char ch2 = '\u0c05';
   char ch3 = 'అ';
   ```
-  #### boolean:
+  8. #### boolean:
   - It has size of 1 bit and represents only two values `true` or `false`. Used mostly for logical operations.
   - Java doesn't consider any other datatype as truthy or falsy values(which is the case in python or js).
   ```java
   boolean isAdult = true;
   ```
+
+Datatype | Size | Default value
+:--- | :---: | :---:
+byte | 1 byte | 0
+short | 2 bytes | 0
+int | 4 bytes | 0
+long | 8 bytes | 0L
+float | 4 bytes | 0.0f
+double | 8 bytes | 0.0
+char | 2 bytes | '\u0000'
+boolean | 1 bit | false
+any object | NA | null
