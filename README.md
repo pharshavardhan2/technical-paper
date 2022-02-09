@@ -1,4 +1,5 @@
-# Basic Datatypes and data structures in Java
+# Basic Datatypes and data structures in Java[^references]
+[^references]: [Oracle tutorials](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html), [JetBrains Academy](https://hyperskill.org)
 ## Datatypes:
 - Datatype describes the values that can be stored by the variable and the type of operations that can be done on it. All datatypes in java can be grouped into two categories.
   1. Primitive datatypes
